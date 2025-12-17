@@ -1,0 +1,1 @@
+const kalkulator=document.querySelector("#zdjecie")

@@ -1,1 +1,64 @@
-<button>a</button>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="kalkulator.css">
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" disabled>
+
+    <table>
+        <tr>
+            <td colspan="2">
+                <button onclick="wyczysc()">C</button>
+            </td>
+            <td>
+                <button onclick="dopisz('/')">/</button>
+            </td>
+            <td>
+                <button onclick="dopisz('*')">*</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td><button onclick="dopisz('7')">7</button></td>
+            <td><button onclick="dopisz('8')">8</button></td>
+            <td><button onclick="dopisz('9')">9</button></td>
+            <td><button onclick="dopisz('-')">-</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="dopisz('4')">4</button></td>
+            <td><button onclick="dopisz('5')">5</button></td>
+            <td><button onclick="dopisz('6')">6</button></td>
+            <td><button onclick="dopisz('+')">+</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="dopisz('1')">1</button></td>
+            <td><button onclick="dopisz('2')">2</button></td>
+            <td><button onclick="dopisz('3')">3</button></td>
+            <td rowspan="2">
+                <button onclick="oblicz()">=</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button onclick="dopisz('0')">0</button>
+            </td>
+            <td>
+                <button onclick="dopisz('.')">.</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<a href="pulpit.html">Powrot do pulpitu</a>
+
+
+<script src="calculator.js"></script>
+</body>
+</html>

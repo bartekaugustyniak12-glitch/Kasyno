@@ -30,3 +30,8 @@
     transform: translateX(-50%) translateY(0);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+
+.zegarek{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kamień Papier Nożyce</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+<h2>Kamień • Papier • Nożyce</h2>
+
+<div id="ramka">
+    <div class="okno">
+        <h3>Gracz</h3>
+        <img id="graczImg">
+        <p>Punkty: <span id="punktyGracz">0</span></p>
+
+        <div id="wybory">
+            <img src="K.jpg" onclick="graj('K')">
+            <img src="P.jpg" onclick="graj('P')">
+            <img src="N.jpg" onclick="graj('N')">
+        </div>
+    </div>
+
+    <div class="okno">
+        <h3>Bot</h3>
+        <img id="botImg">
+        <p>Punkty: <span id="punktyBot">0</span></p>
+    </div>
+</div>
+
+<div id="wynik"></div>
+
+<script src="skrypt.js"></script>
+</body>
+</html>

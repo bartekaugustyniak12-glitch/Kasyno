@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #eee;
+    text-align: center;
+}
+
+#ramka {
+    width: 80%;
+    margin: 20px auto;
+    border: 3px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+}
+
+.okno {
+    width: 40%;
+    border: 2px solid #000;
+}
+
+img {
+    height: 120px;
+    margin: 10px auto;
+    display: block;
+}
+
+#wybory {
+    display: flex;
+    justify-content: center;
+}
+
+#wybory img {
+    height: 70px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#wynik {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,51 +1,58 @@
 <!DOCTYPE html>
-<html lang='pl-PL'>
+<html lang="pl">
 <head>
-	<meta charset='utf-8'>
-	<link rel='stylesheet' type='text/css' href='pacman.css' />
+  <meta charset="UTF-8">
+  <title>Pac-Man</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pacman.css">
 </head>
-<body onkeydown='f1(event)'>
-<table>
-	<tr>
-		<td><img src='pacman.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-	</tr>
-	<tr>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-	</tr>
-	<tr>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-	</tr>
-	<tr>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-	</tr>
-	<tr>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-		<td><img src='bialy.jpg' /></td>
-	</tr>	
-</table>
 
-<p class='info'>Użyj strzałek na klawiaturze</p>
-<p class='info' id='puknkty'>Tu powinny być punkty</p>
-<a href="pulpit.html" class="przycisk">Powrot do pulpitu</a>
-<script src='pacman.js'></script>
+<body onkeydown="f1(event)">
+  <h1>Pac-Man</h1>
+
+  <table>
+    <tr>
+      <td><img src="pacman.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+    </tr>
+    <tr>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+    </tr>
+    <tr>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+    </tr>
+    <tr>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+    </tr>
+    <tr>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+      <td><img src="bialy.jpg"></td>
+    </tr>
+  </table>
+
+  <p>Użyj strzałek lub WASD</p>
+  <p>Punkty: <span id="punkty">0</span></p>
+
+  <a href="pulpit.html" class="btn-back">Powrót do pulpitu</a>
+
+  <script src="pacman.js"></script>
 </body>
 </html>

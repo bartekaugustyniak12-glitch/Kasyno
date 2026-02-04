@@ -1,35 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background: white;
-    padding: 0px;
-    text-align: center;
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    justify-content: center;
+  min-height: 100dvh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.7);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.logo {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(59,130,246,0.4));
+  transition: transform 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08) rotate(8deg);
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  background: linear-gradient(90deg, #60a5fa, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.form-group {
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #cbd5e1;
 }
 
 input {
-    color: black;
-    border: none;
-    background: white;
-    border: 1px solid black;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(148,163,184,0.3);
+  border-radius: 10px;
+  background: rgba(51,65,85,0.4);
+  color: white;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
 }
 
-.przycisk {
-    color: white;
-    background: rgb(28, 141, 233);
-    border-radius: 20px;
-    height: 30px;
-    width: 60px;
-    border: none;
+input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 4px rgba(96,165,250,0.18);
+  background: rgba(51,65,85,0.55);
 }
 
-.logo{
-height: 200px;
-width: 200px;
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 1.2rem;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px -8px rgba(59,130,246,0.5);
 }
-div{
-    height: 500px;
-    width: 500px;
-    text-align: center;
-    justify-content: center;
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -10px rgba(99,102,241,0.6);
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+#wynik {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  min-height: 1.4rem;
+}
+
+.error {
+  color: #f87171;
+}
+
+.success {
+  color: #4ade80;
 }

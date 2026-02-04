@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Kamień Papier Nożyce</title>
-    <link rel="stylesheet" href="pkn.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kamień • Papier • Nożyce</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="pkn.css">
 </head>
 <body>
 
-<h2>Kamień • Papier • Nożyce</h2>
+  <h1>Kamień • Papier • Nożyce</h1>
 
-<div id="ramka">
-    <div class="okno">
-        <h3>Gracz</h3>
-        <img id="graczImg">
-        <p>Punkty: <span id="punktyGracz">0</span></p>
-
-        <div id="wybory">
-            <img src="K.jpg" onclick="graj('K')">
-            <img src="P.jpg" onclick="graj('P')">
-            <img src="N.jpg" onclick="graj('N')">
-        </div>
+  <div class="game-container">
+    <div class="player-side glass">
+      <h2>Gracz</h2>
+      <div class="choice-display">
+        <img id="graczImg" src="" alt="Twój wybór">
+      </div>
+      <p class="score">Punkty: <span id="punktyGracz">0</span></p>
+      
+      <div class="choices">
+        <img src="K.jpg" alt="Kamień"   onclick="graj('K')"   class="choice-btn">
+        <img src="P.jpg" alt="Papier"   onclick="graj('P')"   class="choice-btn">
+        <img src="N.jpg" alt="Nożyce"   onclick="graj('N')"   class="choice-btn">
+      </div>
     </div>
 
-    <div class="okno">
-        <h3>Bot</h3>
-        <img id="botImg">
-        <p>Punkty: <span id="punktyBot">0</span></p>
-    </div>
-</div>
+    <div class="vs">VS</div>
 
-<div id="wynik"></div>
-<a href="pulpit.html" class="przycisk">Powrot do pulpitu</a>
-<script src="pkn.js"></script>
+    <div class="bot-side glass">
+      <h2>Bot</h2>
+      <div class="choice-display">
+        <img id="botImg" src="" alt="Wybór bota">
+      </div>
+      <p class="score">Punkty: <span id="punktyBot">0</span></p>
+    </div>
+  </div>
+
+  <div id="wynik" class="result"></div>
+
+  <a href="pulpit.html" class="btn-back">Powrót do pulpitu</a>
+
+  <script src="pkn.js"></script>
 </body>
 </html>

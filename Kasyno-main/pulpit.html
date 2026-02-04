@@ -1,51 +1,55 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
 <head>
-    <meta charset="utf-8">
-    <title>Główna strona</title>
-    <link rel="stylesheet" type="text/css" href="styl2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pulpit</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styl2.css">
 </head>
-
 <body>
-<h3 class="Ciekawostka">Ciekawostka dnia</h3>
-<div class="Ciekawostka" id="ciekawostka"></div>
 
-<div id="czas">
-    <h2 style="text-align: center;">
-        <span class="zegarek" id="zegarek"></span>
+  <!-- Ciekawostka dnia (prawy górny róg) -->
+  <div class="ciekawostka-card">
+    <h3 class="ciekawostka-title">Ciekawostka dnia</h3>
+    <div id="ciekawostka">Ładowanie ciekawostki...</div>
+  </div>
+
+  <!-- Zegar -->
+  <div class="clock-container">
+    <h2>
+      <span class="zegarek" id="zegarek">--:--:--</span>
     </h2>
-</div>
+  </div>
 
-<div class="kontener">
-    <div class="kalk">
-        <a href="kalkulator.html">
-            <img src="kalkulator.png" class="ikonka">
-        </a>
-    </div>
-
-    <div class="kalk">
-        <a href="pkn.html">
-            <img src="papierkamiennozyce.png" class="ikonka">
-        </a>
-    </div>
-
-    <div class="kalk">
-        <a href="pacman.html">
-            <img src="pacman.png" class="ikonka">
-        </a>
-    </div>
-
-    <div class="kalk">
-    <a href="konwenter.html">
-        <img src="konwerter.png" class="ikonka">
+  <div class="apps-grid">
+    <a href="kalkulator.html" class="app-card">
+      <img src="kalkulator.png" alt="Kalkulator" class="app-icon">
+      <span>Kalkulator</span>
     </a>
-    </div>
-</div>
 
+    <a href="pkn.html" class="app-card">
+      <img src="papierkamiennozyce.png" alt="Papier Kamień Nożyce" class="app-icon">
+      <span>Papier-Kamień-Nożyce</span>
+    </a>
 
-<a href="index.html" class="przycisk">Wyloguj się</a>
+    <a href="pacman.html" class="app-card">
+      <img src="pacman.png" alt="Pacman" class="app-icon">
+      <span>Pacman</span>
+    </a>
 
-<script src="skrypt_pulpit.js"></script>
+    <a href="konwenter.html" class="app-card">
+      <img src="konwerter.png" alt="Konwerter" class="app-icon">
+      <span>Konwerter</span>
+    </a>
+  </div>
 
+  <a href="index.html" class="btn-logout">Wyloguj się</a>
+
+  <script src="skrypt_pulpit.js"></script>
 </body>
 </html>

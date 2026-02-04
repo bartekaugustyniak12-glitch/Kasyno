@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
 <head>
-    <meta charset="utf-8">
-    <title>Logowanie</title>
-    <link rel="stylesheet" href="styl.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logowanie</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styl.css">
 </head>
 <body>
-    <div>
-    <img src="logo.png" class="logo"/>
-    <div>
-    <h3 class="login">Login:</h3><input type="text" id="login">
-    <br/>
-    <h3 class="haslo">Hasło:</h3><input type="password" id="haslo">
-    <br/>
-    <br/>
-    <input type="button" class="przycisk" value="Zaloguj" onclick="zaloguj()">
-</div>
-    
+
+  <div class="card">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo">
+    </div>
+
+    <h1>Zaloguj się</h1>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="login">Login / E-mail</label>
+        <input type="text" id="login" autocomplete="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="haslo">Hasło</label>
+        <input type="password" id="haslo" autocomplete="current-password" required>
+      </div>
+
+      <button type="button" class="btn" onclick="zaloguj()">Zaloguj się</button>
+    </form>
 
     <p id="wynik"></p>
+  </div>
+
+  <script src="skrypt.js"></script>
 </body>
-<script src="skrypt.js"></script>
 </html>

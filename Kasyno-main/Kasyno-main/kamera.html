@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aparat</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    video {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      background: black;
+    }
+
+    .btn-back {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    .btn-back:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Aparat</h2>
+  <video id="video" autoplay playsinline></video>
+
+  <a href="pulpit.html" class="btn-back">← Powrót</a>
+
+  <script>
+    const video = document.getElementById('video');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(err => {
+        alert("Nie udało się uruchomić kamery ");
+        console.error(err);
+      });
+  </script>
+
+</body>
+</html>

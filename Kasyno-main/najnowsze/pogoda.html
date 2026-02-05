@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pogoda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="pogoda.css">
+</head>
+<body>
+
+  <h1 class="title">🌤️ Pogoda w Polsce</h1>
+
+  <div id="weather" class="weather-grid">Ładowanie danych...</div>
+
+  <a href="pulpit.html" class="btn-back">⬅ Powrót</a>
+
+  <script>
+    const apiKey = "0a3f86207ae89a0ef077bbb3778d8da0";
+
+    const cities = [
+      "Warszawa",
+      "Kraków",
+      "Wrocław",
+      "Gdańsk",
+      "Poznań",
+      "Łódź",
+      "Katowice",
+      "Chorzów"
+    ];
+
+    const weatherDiv = document.getElementById("weather");
+
+    async function loadWeather() {
+      weatherDiv.innerHTML = "";
+
+      for (const city of cities) {
+        try {
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},PL&appid=${apiKey}&units=metric&lang=pl`;
+          const res = await fetch(url);
+          if (!res.ok) continue;
+          const data = await res.json();
+
+          weatherDiv.innerHTML += `
+            <div class="weather-card">
+              <h3>${data.name}</h3>
+              <div class="temp">${Math.round(data.main.temp)}°C</div>
+              <div class="desc">${data.weather[0].description}</div>
+              <div class="wind">💨 ${data.wind.speed} m/s</div>
+            </div>
+          `;
+        } catch {}
+      }
+
+      if (!weatherDiv.innerHTML) {
+        weatherDiv.textContent = "Nie udało się pobrać danych 😢";
+      }
+    }
+
+    loadWeather();
+  </script>
+
+</body>
+</html>

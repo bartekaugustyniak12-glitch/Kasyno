@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalkulator</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="kalkulator.css">
+</head>
+<body>
+
+  <div class="calculator-card">
+    <input type="text" id="display" readonly value="0">
+
+    <div class="buttons-grid">
+      <button class="btn-clear" onclick="wyczysc()">C</button>
+      <button class="btn-operator" onclick="dopisz('/')">/</button>
+      <button class="btn-operator" onclick="dopisz('*')">×</button>
+
+      <button class="btn-number" onclick="dopisz('7')">7</button>
+      <button class="btn-number" onclick="dopisz('8')">8</button>
+      <button class="btn-number" onclick="dopisz('9')">9</button>
+      <button class="btn-operator" onclick="dopisz('-')">-</button>
+
+      <button class="btn-number" onclick="dopisz('4')">4</button>
+      <button class="btn-number" onclick="dopisz('5')">5</button>
+      <button class="btn-number" onclick="dopisz('6')">6</button>
+      <button class="btn-operator" onclick="dopisz('+')">+</button>
+
+      <button class="btn-number" onclick="dopisz('1')">1</button>
+      <button class="btn-number" onclick="dopisz('2')">2</button>
+      <button class="btn-number" onclick="dopisz('3')">3</button>
+      <button class="btn-equals" rowspan="2" onclick="oblicz()">=</button>
+
+      <button class="btn-number zero" onclick="dopisz('0')">0</button>
+      <button class="btn-number" onclick="dopisz('.')">.</button>
+    </div>
+  </div>
+
+  <a href="pulpit.html" class="btn-back">Powrót do pulpitu</a>
+
+  <script src="calculator.js"></script>
+</body>
+</html>

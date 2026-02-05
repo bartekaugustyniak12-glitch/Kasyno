@@ -2,40 +2,22 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Pogoda – główne miasta Polski</title>
+  <title>Pogoda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #eef2f3;
-      padding: 20px;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    h1 {
-      text-align: center;
-    }
-
-    #weather {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .city {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-  </style>
+  <link rel="stylesheet" href="pogoda.css">
 </head>
 <body>
 
-  <h1>🌤️ Pogoda w Polsce</h1>
+  <h1 class="title">🌤️ Pogoda w Polsce</h1>
 
-  <div id="weather">Ładowanie danych...</div>
+  <div id="weather" class="weather-grid">Ładowanie danych...</div>
+
+  <a href="pulpit.html" class="btn-back">⬅ Powrót</a>
 
   <script>
     const apiKey = "0a3f86207ae89a0ef077bbb3778d8da0";
@@ -46,7 +28,9 @@
       "Wrocław",
       "Gdańsk",
       "Poznań",
-      "Łódź"
+      "Łódź",
+      "Katowice",
+      "Chorzów"
     ];
 
     const weatherDiv = document.getElementById("weather");
@@ -58,25 +42,18 @@
         try {
           const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},PL&appid=${apiKey}&units=metric&lang=pl`;
           const res = await fetch(url);
-
-          if (!res.ok) {
-            console.error("Błąd API dla miasta:", city);
-            continue;
-          }
-
+          if (!res.ok) continue;
           const data = await res.json();
 
           weatherDiv.innerHTML += `
-            <div class="city">
+            <div class="weather-card">
               <h3>${data.name}</h3>
-              <p>🌡️ ${Math.round(data.main.temp)}°C</p>
-              <p>☁️ ${data.weather[0].description}</p>
-              <p>💨 ${data.wind.speed} m/s</p>
+              <div class="temp">${Math.round(data.main.temp)}°C</div>
+              <div class="desc">${data.weather[0].description}</div>
+              <div class="wind">💨 ${data.wind.speed} m/s</div>
             </div>
           `;
-        } catch (e) {
-          console.error("Błąd:", e);
-        }
+        } catch {}
       }
 
       if (!weatherDiv.innerHTML) {

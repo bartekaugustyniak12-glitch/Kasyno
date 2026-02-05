@@ -4,19 +4,38 @@
   <meta charset="UTF-8">
   <title>Pogoda – główne miasta Polski</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f3;
+      padding: 20px;
+    }
 
-  <link rel="stylesheet" href="pogoda.css">
+    h1 {
+      text-align: center;
+    }
+
+    #weather {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .city {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
 
   <h1>🌤️ Pogoda w Polsce</h1>
 
   <div id="weather">Ładowanie danych...</div>
-
-  <a href="pulpit.html" class="btn-back">Powrót do pulpitu</a>
 
   <script>
     const apiKey = "0a3f86207ae89a0ef077bbb3778d8da0";
@@ -27,9 +46,7 @@
       "Wrocław",
       "Gdańsk",
       "Poznań",
-      "Łódź",
-      "Katowice",
-      "Chorzów"
+      "Łódź"
     ];
 
     const weatherDiv = document.getElementById("weather");
@@ -42,7 +59,10 @@
           const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},PL&appid=${apiKey}&units=metric&lang=pl`;
           const res = await fetch(url);
 
-          if (!res.ok) continue;
+          if (!res.ok) {
+            console.error("Błąd API dla miasta:", city);
+            continue;
+          }
 
           const data = await res.json();
 
@@ -55,7 +75,7 @@
             </div>
           `;
         } catch (e) {
-          console.error(e);
+          console.error("Błąd:", e);
         }
       }
 
@@ -66,5 +86,6 @@
 
     loadWeather();
   </script>
+
 </body>
 </html>

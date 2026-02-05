@@ -124,26 +124,3 @@ button {
 .history-item span {
   font-weight:600;
 }
-
-.btn-back {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, #3b82f6, #6366f1);
-  color: white;
-  padding: 0.9rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1.05rem;
-  font-weight: 600;
-  box-shadow: 0 10px 25px -8px rgba(59,130,246,0.5);
-  transition: all 0.25s ease;
-}
-
-.btn-back:hover {
-  transform: translateX(-50%) translateY(-3px);
-  box-shadow: 0 15px 35px -10px rgba(99,102,241,0.6);
-  background: linear-gradient(90deg, #2563eb, #4f46e5);
-}
-

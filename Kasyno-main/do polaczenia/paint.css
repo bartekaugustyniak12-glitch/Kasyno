@@ -1,0 +1,23 @@
+body {
+  background: #1e1e2f;
+  color: white;
+  font-family: Inter, sans-serif;
+  text-align: center;
+}
+
+.tools {
+  margin-bottom: 10px;
+}
+
+canvas {
+  background: white;
+  border-radius: 10px;
+  cursor: crosshair;
+}
+
+.back {
+  display: block;
+  margin-top: 15px;
+  color: #aaa;
+  text-decoration: none;
+}

@@ -20,7 +20,6 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      gap: 16px;
     }
 
     video {
@@ -31,65 +30,39 @@
       background: black;
     }
 
-    button, .btn-back {
+    .btn-back {
+      margin-top: 20px;
       padding: 10px 20px;
       background: #2563eb;
       color: white;
-      border: none;
+      text-decoration: none;
       border-radius: 10px;
       font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
     }
 
-    button:hover, .btn-back:hover {
+    .btn-back:hover {
       background: #1d4ed8;
-    }
-
-    canvas {
-      display: none;
     }
   </style>
 </head>
 <body>
 
   <h2>Aparat</h2>
-
   <video id="video" autoplay playsinline></video>
 
-  <button id="photoBtn">📸 Zrób zdjęcie</button>
   <a href="pulpit.html" class="btn-back">← Powrót</a>
-
-  <canvas id="canvas"></canvas>
 
   <script>
     const video = document.getElementById('video');
-    const canvas = document.getElementById('canvas');
-    const photoBtn = document.getElementById('photoBtn');
 
     navigator.mediaDevices.getUserMedia({ video: true })
       .then(stream => {
         video.srcObject = stream;
       })
       .catch(err => {
-        alert("Nie udało się uruchomić kamery");
+        alert("Nie udało się uruchomić kamery ");
         console.error(err);
       });
-
-    photoBtn.addEventListener('click', () => {
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight;
-
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(video, 0, 0);
-
-      const imageData = canvas.toDataURL('image/png');
-
-      const link = document.createElement('a');
-      link.href = imageData;
-      link.download = 'zdjecie.png';
-      link.click();
-    });
   </script>
 
 </body>

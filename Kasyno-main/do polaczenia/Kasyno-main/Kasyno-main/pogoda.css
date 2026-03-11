@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #60a5fa, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.8rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.weather-card {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,0.45);
+  transition: all 0.25s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -12px rgba(96,165,250,0.35);
+}
+
+.weather-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.temp {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(90deg, #60a5fa, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.wind {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.btn-back {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px -8px rgba(59,130,246,0.5);
+  transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 15px 35px -10px rgba(99,102,241,0.6);
+}

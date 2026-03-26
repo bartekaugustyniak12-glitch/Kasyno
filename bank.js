@@ -63,10 +63,8 @@ function withdraw() {
   document.getElementById('amount').value = '';
 }
 
-// Podpięcie przycisków
 depositBtn.addEventListener('click', deposit);
 withdrawBtn.addEventListener('click', withdraw);
 
-// Inicjalizacja
 updateBalance();
 updateHistory();

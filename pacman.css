@@ -22,7 +22,6 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Glass card */
 .glass {
   background: rgba(30, 41, 59, 0.65);
   backdrop-filter: blur(16px);
@@ -34,7 +33,6 @@ h1 {
   box-shadow: 0 20px 50px -12px rgba(0,0,0,0.6);
 }
 
-/* Plansza */
 table {
   margin: 0 auto 1.5rem;
   border-spacing: 6px;
@@ -50,7 +48,6 @@ td img {
   box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
-/* Info */
 .info {
   font-size: 1.1rem;
   margin-top: 0.5rem;
@@ -63,7 +60,6 @@ td img {
   color: #fde047;
 }
 
-/* Przycisk powrotu */
 .btn-back {
   position: fixed;
   bottom: 30px;

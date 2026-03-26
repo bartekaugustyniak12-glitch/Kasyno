@@ -27,7 +27,7 @@ h1 {
   margin: 0 auto 2rem;
 }
 
-/* Glass */
+
 .glass {
   background: rgba(30, 41, 59, 0.65);
   backdrop-filter: blur(16px);
@@ -92,7 +92,6 @@ button:hover {
   color: #fde047;
 }
 
-/* Powrót */
 .btn-back {
   position: fixed;
   bottom: 30px;

@@ -13,7 +13,6 @@ body {
   position: relative;
 }
 
-/* Ciekawostka – glassmorphism, prawy górny róg */
 .ciekawostka-card {
   position: fixed;
   top: 20px;
@@ -44,7 +43,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Zegar – wyśrodkowany u góry */
+
 .clock-container {
   text-align: center;
   margin: 1rem 0 3rem;
@@ -60,7 +59,6 @@ body {
   text-shadow: 0 4px 12px rgba(96,165,250,0.3);
 }
 
-/* Siatka aplikacji */
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -107,7 +105,6 @@ body {
   font-weight: 500;
 }
 
-/* Przycisk Wyloguj – na dole */
 .btn-logout {
   position: fixed;
   bottom: 30px;
